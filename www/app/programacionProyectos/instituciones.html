@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+        <link rel="icon" type="image/png" href="../../img/logoguanenta.png">
+        <title> REDColsi App | COLEGIO GUANENTÁ | UNISANGIL </title>
+        
+
+        <link rel="stylesheet" type="text/css" href="../../js/jquery.mobile-1.4.5/jquery.mobile.theme-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="../../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/tema.css">
+
+
+        <script type="text/javascript" src="../../js/jquery-2.2.0.min.js"/></script>
+        <script type="text/javascript" src="../../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"/></script>
+        <script type="text/javascript" src="../../cordova.js"></script>
+        <script type="text/javascript" src="../../js/SQLite/dataBase.js"></script>        
+        <script type="text/javascript" src="../../js/SQLite/db-universal.js"></script>
+        <script type="text/javascript" src="../../js/SQLite/db-operaciones.js"></script>
+	</head>
+	<body onload="getRecords_Instituciones()">
+		<section data-role="page" id="index" > 
+			<header data-role="header">
+				<h1 id="encabezado">RedColsi</h1>
+				<nav data-role="navbar" class="navBar">
+					<ul>
+						<li><a href="javascript:history.go(-1)" rel="external">Inicio</a></li>
+						<li><a href="#index" class="ui-btn-active" checked="checked" data-theme="b">Instituciones</a> </li>
+					</ul>
+				</nav>
+			</header>
+			<article data-role="content">
+				<div id="inicio" class="principal">
+					<h3 class="tituloPrincipal"> Busca Tu Institucion</h3>
+					<p id="parrafos"> Puedes usar el filtro para buscar por el nombre de tu institución </p>
+					<form>
+						<input data-type="search" id="filtroRecurso" placeholder="Buscar..">
+					</form>
+					
+
+					<div id="divBusqueda" data-role="controlgroup" data-filter="true" data-input="#filtroRecurso">
+						<!--ES UN MILAGRO SE MUESTRAN LAS INSTITUCIONES-->
+					</div>
+
+
+
+					<!--<div id="busqueda" data-role="controlgroup" data-filter="true" data-input="#filtroRecurso">
+						<a href="result.sear.instituciones.html" data-role="button" rel="external">COLEGIO GUANENTÁ</a>
+						<a href="" data-role="button">ICBF</a>
+						<a href="" data-role="button">UNISANGIL</a>
+					</div>-->
+				</div>
+			</article>
+			<footer data-role="footer">
+				<h1>UNISANGIL / COLEGIO GUANENTÁ</h1>
+			</footer>
+		</section>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+        <link rel="icon" type="image/png" href="img/logoguanenta.png">
+        <title> REDColsi App | COLEGIO GUANENTÁ | UNISANGIL </title>
+        
+
+        <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5/jquery.mobile.theme-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" type="text/css" href="css/tema.css">
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"/></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"/></script>
+        <script type="text/javascript" src="js/SQLite/dataBase.js"></script>
+        <script type="text/javascript" src="js/SQLite/db-universal.js"></script>        
+        <script type="text/javascript" src="js/SQLite/db-operaciones.js"></script>
+
+         <script type="text/javascript">
+
+        function Actualizar(){
+        $.post('http://encuentrodepartamental2016.colegioguanenta.edu.co/classesphp/validar.php',{ },function(respuesta){
+        //$.post('http://192.168.1.10/Proyecto1/classesphp/validar.php',{ },function(respuesta){
+            if (respuesta == 1) {
+
+                var $this = $( this ),
+                theme = ( "b" ) || $.mobile.loader.prototype.options.theme,
+                msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+                textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+                textonly = !!$this.jqmData( "textonly" );
+                html = $this.jqmData( "html" ) || "";
+                $.mobile.loading( "show", {
+                    text: "Actualizando base de datos por favor Espere",
+                    textVisible: true,
+                    theme: "b",
+                    textonly: false,
+                    html: html
+                });
+            updateDB();
+            //$.mobile.changePage("otro.html");
+            //alert("Hay conexion");
+            //alert('hola');                
+            }
+            
+        });
+    }
+
+        </script>
+    
+
+</head>
+<body onload="Actualizar();">
+    <section data-role="page" id="index"> 
+
+        <header data-role="header">
+
+            <h1 id="encabezado">RedColsi</h1>
+
+        </header>
+        <article data-role="content"> 
+            <div class="logos">
+
+
+                <img id="imagencolegio1" src="img/logoredcolsi.png"> 
+            </div>
+
+            <div id="inicio" class="principal"> 
+
+            <h3 class="tituloPrincipal">Encuentro Departamental de Semilleros de Investigación</h3> 
+
+            <p id="parrafoprincipal"> XII ENCUENTRO DEPARTAMENTAL DE SEMILLEROS DE INVESTIGACIÓN,  12 y 13 de Mayo de 2016, Colegio San José de Guanentá - San Gil, Nodo Santander, RedCOLSI. </p>
+                                
+            <div data-role="collapsibleset" data-theme="a"> 
+
+                <div data-role="collapsible">
+                    <h3>Nodo</h3>
+                    <a href="app/nodo/definicion.html" data-role="button" rel="external">Definición</a>
+                    <a href="app/nodo/comite.html" data-role="button" rel="external">Comité Ejecutivo</a>
+                    <a href="app/nodo/institucionesnodo.html" data-role="button" rel="external">Instituciones</a>
+                    <a href="app/nodo/institucionnodo.html" data-role="button" rel="external">Institución Anfitrión</a>
+                    <a href="app/nodo/programaciongeneral.html" data-role="button" rel="external">Programación General</a>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Programación de Proyectos</h3>
+
+                    <a href="app/programacionProyectos/instituciones.html" data-role="button" rel="external">INSTITUCIÓN</a>
+                    <a href="app/programacionProyectos/area.html" data-role="button" rel="external">ÁREA</a>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Programación de minicursos</h3>
+
+                    <a href="app/programacionMiniCursos/index.html" rel="external" data-role="button" rel="external">Ver minicursos</a>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Equipo de Desarrollo</h3>
+
+                        <a data-role="button" data-mini="true">FABIAN ANDRES MILLAN<br>Estudiante Unisangil <br> fabianmillan@unisangil.edu.co </a>
+
+                        <a data-role="button" data-mini="true">EDWIN JESÚS PÁEZ<br>Estudiante Col. Guanentá <br> edwinjpr11@gmail.com</a>
+
+                        <a data-role="button" data-mini="true">BRAYAN ROLANDO PARRA<br>Estudiante Col. Guanentá <br> brayanparra1199@gmail.com</a>
+
+                        <a data-role="button" data-mini="true">GERARDO ANDRES ÁRIAS<br>Estudiante Col. Guanentá <br> gerardoariasremolina@gmail.com</a>
+
+                        <a data-role="button" data-mini="true">NESTOR JESÚS PÁEZ<br>Docente Col. Guanentá <br> npaez@colegioguanenta.edu.co</a>
+                </div>
+            </div>
+
+            </div>
+
+             <div class="logos">                         
+                <img src="img/logoredcolsi.png"> 
+                <img src="img/logonodo.png">   
+                <img src="img/unisangil.png">    
+                <img src="img/logoguanenta.png">  
+                <img src="img/logosguanenta.png">           
+            </div>
+            </div>
+            </div>
+        </article>
+        <footer id="piedepagina" data-role="footer">
+            <h1>UNISANGIL / COLEGIO GUANENTÁ</h1>
+        </footer>
+    </section>
+<!--agnmb-spm-->
+</body>
+</html>

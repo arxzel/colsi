@@ -1,0 +1,167 @@
+<div class='ui-collapsible-set ui-group-theme-a ui-corner-all' data-role='collapsibleset' data-theme='a'>	
+
+	<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child ui-collapsible-collapsed' data-role='collapsible'>
+		<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>
+			<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-a ui-icon-plus ui-btn-active'>
+				Ciencias Agrarias
+				<span class='ui-collapsible-heading-status'> click to expand contents</span>
+			</a>
+		</h3>
+		<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>Ingeniería Agrícola</a>	
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>Agroindustria</a>				
+		</div>
+	</div>
+
+	<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-collapsible-collapsed' data-role='collapsible'>
+		<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>
+			<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-a ui-icon-plus'>
+				Ciencias Biológicas y del Mar
+				<span class='ui-collapsible-heading-status'> click to expand contents</span>
+			</a>
+		</h3>
+		<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>MICROBIOLOGÍA</a>	
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>BACTERIOLOGÍA Y LABORATORIO CLÍNICO</a>				
+		</div>
+	</div>
+
+
+	<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-collapsible-collapsed ui-last-child' data-role='collapsible'>
+		<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>
+			<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-icon-plus ui-btn-icon-left ui-btn-a'>
+				Lingüística, Artes y Letras
+				<span class='ui-collapsible-heading-status'> click to expand contents</span>
+			</a>
+		</h3>
+		<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>LINGÛÍSTICA</a>	
+			<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>EDUCACIÓN</a>		
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ for (var i=0; i<response.rows.length; i++) {
+
+                if(i==0){
+                    temp +="<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-first-child ui-collapsible-collapsed' data-role='collapsible'>";
+                    temp +="<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>";
+                    temp +="<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-a ui-icon-plus ui-btn-active'>";
+                    temp +=""+response.rows.item(i).area_nombre+"";
+                    temp +="<span class='ui-collapsible-heading-status'> click to expand contents</span>";
+                    temp +="</a>";
+                    temp +="</h3>";
+                    temp +="<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>Ingeniería Agrícola</a>";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>Agroindustria</a>";
+                    temp +="</div>";
+                    temp +="</div>";
+                }else if(i ==response.rows.length-1){
+                    temp +="<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-collapsible-collapsed ui-last-child' data-role='collapsible'>";
+                    temp +="<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>";
+                    temp +="<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-icon-plus ui-btn-icon-left ui-btn-a'>";
+                    temp +=""+response.rows.item(i).area_nombre+"";
+                    temp +="<span class='ui-collapsible-heading-status'> click to expand contents</span>";
+                    temp +="</a>";
+                    temp +="</h3>";
+                    temp +="<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>LINGÛÍSTICA</a>   ";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>EDUCACIÓN</a>     ";
+                    temp +="</div>";
+                }
+                else{
+                    temp +="<div class='ui-collapsible ui-collapsible-inset ui-corner-all ui-collapsible-themed-content ui-collapsible-collapsed' data-role='collapsible'>";
+                    temp +="<h3 class='ui-collapsible-heading ui-collapsible-heading-collapsed'>";
+                    temp +="<a href='#' class='ui-collapsible-heading-toggle ui-btn ui-btn-icon-left ui-btn-a ui-icon-plus'>";
+                    temp +=""+response.rows.item(i).area_nombre+"";
+                    temp +="<span class='ui-collapsible-heading-status'> click to expand contents</span>";
+                    temp +="</a>";
+                    temp +="</h3>";
+                    temp +="<div aria-hidden='true' class='ui-collapsible-content ui-body-inherit ui-collapsible-content-collapsed'>";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>MICROBIOLOGÍA</a> ";
+                    temp +="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all' rel='external' data-role='button'>BACTERIOLOGÍA Y LABORATORIO CLÍNICO</a>               ";
+                    temp +="</div>";
+                    temp +="</div>";
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            var temp="<div data-role='collapsibleset' data-theme='a' data-content-theme='a'>";
+                var temp="<div data-role='collapsible'>";
+                var temp="<h3>Section 1</h3>";
+                var temp="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all ui-first-child' href='#' data-role='button' rel='external'>'+response.rows.item(i).area_nombre+'</a>";
+                var temp="</div>";
+                var temp="<div data-role='collapsible'>";
+                var temp="<h3>Section 2</h3>";
+                var temp="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all ui-first-child' href='#' data-role='button' rel='external'>'+response.rows.item(i).area_nombre+'</a>";
+                var temp="</div>";
+                var temp="<div data-role='collapsible'>";
+                var temp="<h3>Section 3</h3>";
+                var temp="<a role='button' class='ui-link ui-btn ui-shadow ui-corner-all ui-first-child' href='#' data-role='button' rel='external'>'+response.rows.item(i).area_nombre+'</a>";
+                var temp="</div>";
+                var temp="</div>";
