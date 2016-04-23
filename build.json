@@ -1,0 +1,18 @@
+{
+     "android": {
+         "debug": {
+             "keystore": "redcolsi.keystore",
+             "storePassword": "4rx231",
+             "alias": "redcolsi",
+             "password" : "4rx231",
+             "keystoreType": ""
+         },
+         "release": {
+             "keystore": "redcolsi.keystore",
+             "storePassword": "4rx231",
+             "alias": "redcolsi",
+             "password" : "4rx231",
+             "keystoreType": ""
+         }
+     }
+ }
